@@ -1,0 +1,70 @@
+﻿<Window x:Class="PagoProv.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PagoProv"
+        mc:Ignorable="d"
+        Title="Gestión de Pagos a Proveedores" Height="600" Width="800">
+    <Grid>
+        <!-- Nombre de la aplicación -->
+        <TextBlock Text="Gestión de Pagos a Proveedores" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="10"/>
+
+        <!-- Sección de Proveedores -->
+        <Grid Margin="10,50,10,280">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Grilla de Proveedores -->
+            <DataGrid x:Name="dgProveedores" AutoGenerateColumns="False" SelectionChanged="dgProveedores_SelectionChanged" CanUserAddRows="False" Grid.Row="0" Margin="10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Legajo" Binding="{Binding Legajo}" Width="*"/>
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Texbox para agregar/modificar/Eliminar proveedores -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10" Grid.Row="1">
+                <Label Content="Legajo:" VerticalAlignment="Center" Margin="5"/>
+                <TextBox x:Name="txtLegajo" Width="100" Margin="5"/>
+                <Label Content="Nombre:" VerticalAlignment="Center" Margin="5"/>
+                <TextBox x:Name="txtNombre" Width="200" Margin="5"/>
+            </StackPanel>
+
+            <!-- Botones del ABM -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10" Grid.Row="2">
+                <Button x:Name="btnAgregar" Content="Agregar" Width="80" Margin="5"/>
+                <Button x:Name="btnModificar" Content="Modificar" Width="80" Margin="5"/>
+                <Button x:Name="btnEliminar" Content="Eliminar" Width="80" Margin="5"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Seccion de Pagos -->
+        <Grid Margin="10,350,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Grilla de Pagos -->
+            <DataGrid x:Name="dgPagos" AutoGenerateColumns="False" CanUserAddRows="False" Grid.Row="0" Margin="10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Código" Binding="{Binding Codigo}" Width="*"/>
+                    <DataGridTextColumn Header="Fecha de Vencimiento" Binding="{Binding FechaVencimiento}" Width="*"/>
+                    <DataGridTextColumn Header="Importe a Pagar" Binding="{Binding Importe}" Width="*"/>
+                    <DataGridTextColumn Header="Recargo" Binding="{Binding Recargo}" Width="*"/>
+                    <DataGridTextColumn Header="Total Abonado" Binding="{Binding TotalAbonado}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Botones para realizar pagos -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10" Grid.Row="1">
+                <Button x:Name="btnEfectivo" Content="Pagar en Efectivo" Width="120" Margin="5" Click="btnEfectivo_Click"/>
+                <Button x:Name="btnCheque" Content="Pagar con Cheque" Width="120" Margin="5" Click="btnCheque_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

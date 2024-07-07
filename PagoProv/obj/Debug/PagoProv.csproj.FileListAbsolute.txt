@@ -1,0 +1,15 @@
+D:\c#\PagoProv\PagoProv\bin\Debug\PagoProv.exe.config
+D:\c#\PagoProv\PagoProv\bin\Debug\PagoProv.exe
+D:\c#\PagoProv\PagoProv\bin\Debug\PagoProv.pdb
+D:\c#\PagoProv\PagoProv\obj\Debug\PagoProv.csproj.AssemblyReference.cache
+D:\c#\PagoProv\PagoProv\obj\Debug\MainWindow.g.cs
+D:\c#\PagoProv\PagoProv\obj\Debug\App.g.cs
+D:\c#\PagoProv\PagoProv\obj\Debug\PagoProv_MarkupCompile.cache
+D:\c#\PagoProv\PagoProv\obj\Debug\PagoProv_MarkupCompile.lref
+D:\c#\PagoProv\PagoProv\obj\Debug\MainWindow.baml
+D:\c#\PagoProv\PagoProv\obj\Debug\PagoProv.g.resources
+D:\c#\PagoProv\PagoProv\obj\Debug\PagoProv.Properties.Resources.resources
+D:\c#\PagoProv\PagoProv\obj\Debug\PagoProv.csproj.GenerateResource.cache
+D:\c#\PagoProv\PagoProv\obj\Debug\PagoProv.csproj.CoreCompileInputs.cache
+D:\c#\PagoProv\PagoProv\obj\Debug\PagoProv.exe
+D:\c#\PagoProv\PagoProv\obj\Debug\PagoProv.pdb
